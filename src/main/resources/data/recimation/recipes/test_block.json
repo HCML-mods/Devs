@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "armadeus:test_item"
+    }
+  },
+  "result": {
+    "item": "armadeus:test_block"
+  }
+}

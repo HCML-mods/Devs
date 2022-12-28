@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model":  "armadeus:block/test_block"}
+  }
+}

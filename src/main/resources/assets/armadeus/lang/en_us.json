@@ -1,0 +1,52 @@
+{
+  "item.armadeus.test_item": "Test Item",
+  "item.armadeus.geo_test_item": "Test Rare Item",
+
+  "block.armadeus.test_block": "Test Block",
+
+  "key.category.armadeus.general": "Armadeus Mod",
+  "key.armadeus.prone": "Prone",
+
+  "item.armadeus.empty_can": "Empty Can",
+  "item.armadeus.can_opener": "Can Opener",
+
+  "item.armadeus.canned_applesauce_closed": "Canned Applesauce (Closed)",
+  "item.armadeus.canned_applesauce_opened": "Canned Applesauce (Opened)",
+  "item.armadeus.canned_beans_closed": "Canned Beans (Closed)",
+  "item.armadeus.canned_beans_opened": "Canned Beans (Opened)",
+  "item.armadeus.canned_carrots_closed": "Canned Carrots (Closed)",
+  "item.armadeus.canned_carrots_opened": "Canned Carrots (Opened)",
+  "item.armadeus.canned_mushroomc_closed": "Canned Mushroom Cream (Closed)",
+  "item.armadeus.canned_mushroomc_opened": "Canned Mushroom Cream (Opened)",
+  "item.armadeus.chips_item": "Potato chip",
+  "item.armadeus.chips_bag": "Bag of chips",
+  "item.armadeus.poisonous_chips_item": "Poisonous potato chip",
+
+  "item.armadeus.ammo_127_99_bmg": "12.7x99mm Cartridge (.50 BMG)",
+  "item.armadeus.ammo_127_99_case": "12.7x99mm Cartridge Case",
+  "item.armadeus.ammo_127_99_bullet": "12.7x99mm Cartridge Bullet",
+  "item.armadeus.primer": "Ammunition primer",
+  "item.armadeus.gunpowder": "Gunpowder",
+
+
+  "sounds.armadeus.prone_image": "Prone",
+  "sounds.armadeus.un_prone_image": "Prone",
+
+
+
+  "item.armadeus.broken_pcb": "Printed Circuit Board (Broken)",
+  "item.armadeus.capacitors": "Capacitors",
+  "item.armadeus.copper_plate": "Copper Plate",
+  "item.armadeus.electronic_chips": "Electronic Chips",
+  "item.armadeus.wire_coil": "Wire Coil",
+  "item.armadeus.wires": "Wires",
+
+
+  "itemGroup.test_tab": "Project : Armadeus (Test)",
+  "itemGroup.food_stuff": "Project : Armadeus (Food Stuff)",
+  "itemGroup.barter_items": "Project : Armadeus (Barter items)",
+  "itemGroup.ammo": "Project : Armadeus (Ammunition)",
+
+  "block.armadeus.asphalt": "Road Block",
+  "block.armadeus.stonebricks_2": "Stone bricks (2)"
+}

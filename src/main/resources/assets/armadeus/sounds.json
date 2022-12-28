@@ -1,0 +1,14 @@
+{
+  "prone_event": {
+    "subtitle": "sounds.armadeus.prone_event",
+    "sounds": [
+      "armadeus:omg"
+    ]
+  },
+  "un_prone_event": {
+    "subtitle": "sounds.armadeus.un_prone_event",
+    "sounds": [
+      "armadeus:omg"
+    ]
+  }
+}
