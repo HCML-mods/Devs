@@ -19,6 +19,7 @@ public class ModEventClientBusEvents {
 
     @SubscribeEvent
     public static void registerGuiOverlays(RegisterGuiOverlaysEvent event) {
+        event.registerAboveAll("viewmodel", ModdedHudOverlays.VIEW_MODEL);
         event.registerAboveAll("info", ModdedHudOverlays.HUD_INFO);
     }
 }

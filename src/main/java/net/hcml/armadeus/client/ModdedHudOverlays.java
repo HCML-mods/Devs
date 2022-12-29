@@ -1,6 +1,8 @@
 package net.hcml.armadeus.client;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.math.Matrix4f;
+import com.mojang.math.Vector3f;
 import net.hcml.armadeus.ArmadeusMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiComponent;
@@ -9,15 +11,49 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
+import net.minecraftforge.client.model.obj.ObjLoader;
+import org.lwjgl.opengl.GL11;
 
-import java.awt.*;
-import java.util.ArrayList;
+import org.w3c.dom.Node;
+
+import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
+import java.util.List;
+
+import static com.mojang.blaze3d.systems.RenderSystem.glBindVertexArray;
+import static org.lwjgl.opengl.GL11.*;
 
 public class ModdedHudOverlays {
     private static final ResourceLocation BG = new ResourceLocation(ArmadeusMod.MOD_ID, "textures/gui/hud/bg.png");
 
     static final int size = 32;
     static final int yoffset = 40;
+    ObjLoader
+    private Node rootNode;
+    private List<Geometry> geometries;
+
+    public ObjModel(String objFile, AssetManager assetManager) {
+        // Set up the asset manager to search for the OBJ file in the local file system
+        assetManager.registerLocator("", FileLocator.class);
+
+        // Load the OBJ file using the Wavefront OBJ Loader
+        rootNode = (Node) assetManager.loadModel(objFile);
+
+        // Extract the geometries from the root node
+        geometries = rootNode.getChildren();
+    }
+
+    public static final IGuiOverlay VIEW_MODEL = ((gui, poseStack, partialTick, width, height) -> {
+        Player player = Minecraft.getInstance().player;
+        Matrix4f modelMatrix = new Matrix4f();
+        modelMatrix.setIdentity();
+        modelMatrix.translate(new Vector3f(0.5f, -0.5f, 0.5f));
+
+        // Bind the gun model's VAO and draw the current frame of the animation
+        glBindVertexArray(gunModel.getVaoID());
+        glDrawElements(GL_TRIANGLES, gunModel.getVertexCount(), GL_UNSIGNED_INT, 0);
+    });
+    //modelMatrix((float) Math.toRadians(-45), new Vector3f(0, 1, 0));
 
     public static final IGuiOverlay HUD_INFO = ((gui, poseStack, partialTick, width, height) -> {
         Player player = Minecraft.getInstance().player;
